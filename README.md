@@ -1,3 +1,5 @@
+<img width="1027" alt="image" src="https://github.com/Manoj-nathwani/WHO-African-Regional-Health-Data-Hub-React-Components/assets/2634482/98cb7219-a767-4705-ab2d-2e7f0a38e220">
+
 # Fjelltopp CKAN Data Visualisations
 
 This repository contains small, independent React components designed to be integrated into CKAN resource templates. These components can be individually built and added to Jinja2 templates for CKAN resources.
