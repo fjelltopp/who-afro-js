@@ -77,32 +77,32 @@ export default function LineChart({ years, data, selectedSex }) {
                     data: allYears.map(year => getValue(year, sex)),
                     borderColor: color,
                     backgroundColor: color,
-                    borderWidth: active ? 4 : 2,
+                    borderWidth: active ? 6 : 1,
                     pointRadius: active ? 4 : 2,
                     pointHoverRadius: active ? 20 : 5,
                 })
             }),
-            {
-                label: "Error Lower Bound",
-                data: allYears.map(year => {
-                    // TODO: stop faking the error bounds
-                    const value = getValue(year, selectedSex)
-                    return value ? value - (Math.random() * 1) : null
-                }),
-                pointRadius: 0,
-                pointHoverRadius: 0
-            },
-            {
-                fill: "-1",
-                label: "Error Upper Bound",
-                data: allYears.map(year => {
-                    // TODO: stop faking the error bounds
-                    const value = getValue(year, selectedSex)
-                    return value ? value + (Math.random() * 1) : null
-                }),
-                pointRadius: 0,
-                pointHoverRadius: 0
-            },
+            // {
+            //     label: "Error Lower Bound",
+            //     data: allYears.map(year => {
+            //         // TODO: stop faking the error bounds
+            //         const value = getValue(year, selectedSex)
+            //         return value ? value - (Math.random() * 1) : null
+            //     }),
+            //     pointRadius: 0,
+            //     pointHoverRadius: 0
+            // },
+            // {
+            //     fill: "-1",
+            //     label: "Error Upper Bound",
+            //     data: allYears.map(year => {
+            //         // TODO: stop faking the error bounds
+            //         const value = getValue(year, selectedSex)
+            //         return value ? value + (Math.random() * 1) : null
+            //     }),
+            //     pointRadius: 0,
+            //     pointHoverRadius: 0
+            // },
         ],
     }
 
