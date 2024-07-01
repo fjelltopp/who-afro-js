@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import ConfigContext from '../ConfigContext';
-import { getSexColour } from "./utils";
+import { getSexColour } from './utils';
 
 interface PanelProps {
     panel: {
@@ -52,8 +52,8 @@ export default function Panel({ panel, table }: PanelProps) {
                     {table.data.map((x, index) => (
                         <tr
                             key={index}
-                            className={x.active ? "table-active" : ""}
-                            style={{ cursor: "pointer" }}
+                            className={x.active ? 'table-active' : ''}
+                            style={{ cursor: 'pointer' }}
                             onClick={x.handleClick}
                         >
                             <td>{x.key}</td>

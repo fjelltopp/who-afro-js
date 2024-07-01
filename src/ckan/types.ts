@@ -10,18 +10,18 @@ export interface ConfigType {
         segment: string;
         amount: string;
         noRowsWarning: string;
-    },
+    };
     SEXES: {
         id: string;
         label: string;
         color: string;
-    }[],
+    }[];
     API_FIELDS: {
         value: string;
         country: string;
         segment: string;
         time_axis: string;
-    },
+    };
     ROUND_TO_DECIMAL_PLACES: number;
 }
 

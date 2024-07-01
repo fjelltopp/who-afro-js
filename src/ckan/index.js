@@ -1,8 +1,8 @@
-import { createRoot } from 'react-dom/client'
-import ConfigContext from './ConfigContext'
-import App from './app'
+import { createRoot } from 'react-dom/client';
+import ConfigContext from './ConfigContext';
+import App from './app';
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root');
 
 export default function Root() {
     const config = {
@@ -13,15 +13,14 @@ export default function Root() {
         LABELS: JSON.parse(rootElement.getAttribute('data-labels')),
         SEXES: JSON.parse(rootElement.getAttribute('data-sexes')),
         API_FIELDS: JSON.parse(rootElement.getAttribute('data-api-fields')),
-    }
+    };
 
     return (
         <ConfigContext.Provider value={config}>
             <App />
         </ConfigContext.Provider>
-    )
-
+    );
 }
 
-const root = createRoot(rootElement)
-root.render(<Root />)
+const root = createRoot(rootElement);
+root.render(<Root />);

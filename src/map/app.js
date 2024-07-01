@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { createRoot } from 'react-dom/client'
-import Map from "./map"
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Map from './map';
 
 const App = () => {
-    const [country, setCountry] = useState({})
+    const [country, setCountry] = useState({});
 
     return (
         <>
@@ -17,11 +17,9 @@ const App = () => {
                     <pre>{JSON.stringify(country.properties, null, 3)}</pre>
                 </div>
             </div>
-
         </>
-    )
+    );
+};
 
-}
-
-const root = createRoot(document.getElementById('root'))
-root.render(<App />)
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);

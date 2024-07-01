@@ -1,26 +1,14 @@
-import { ComposableMap, Geographies, Geography } from "react-simple-maps"
-import { Tooltip as ReactTooltip } from 'react-tooltip'
-import { scaleQuantize } from "d3-scale"
+import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
+import { scaleQuantize } from 'd3-scale';
 
-const tooltipId = "map-tooltip"
-const geoUrl =
-    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+const tooltipId = 'map-tooltip';
+const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
 export default function Map({ country, setCountry }) {
-
     const colorScale = scaleQuantize()
         .domain([1, 10])
-        .range([
-            "#ffedea",
-            "#ffcec5",
-            "#ffad9f",
-            "#ff8a75",
-            "#ff5533",
-            "#e2492d",
-            "#be3d26",
-            "#9a311f",
-            "#782618"
-        ])
+        .range(['#ffedea', '#ffcec5', '#ffad9f', '#ff8a75', '#ff5533', '#e2492d', '#be3d26', '#9a311f', '#782618']);
 
     return (
         <>
@@ -28,7 +16,7 @@ export default function Map({ country, setCountry }) {
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                         geographies.map((geo) => {
-                            const isActive = geo === country
+                            const isActive = geo === country;
                             return (
                                 <Geography
                                     key={geo.rsmKey}
@@ -37,35 +25,35 @@ export default function Map({ country, setCountry }) {
                                     data-tooltip-content={geo.properties.name}
                                     onClick={() => {
                                         if (isActive) {
-                                            setCountry({})
+                                            setCountry({});
                                         } else {
-                                            setCountry(geo)
+                                            setCountry(geo);
                                         }
                                     }}
                                     // fill={colorScale(cur ? cur.unemployment_rate : "#EEE")}
                                     style={{
                                         default: {
-                                            fill: isActive ? "#E42" : "#D6D6DA",
-                                            outline: "none",
-                                            stroke: "#bbbbc2",
+                                            fill: isActive ? '#E42' : '#D6D6DA',
+                                            outline: 'none',
+                                            stroke: '#bbbbc2',
                                             strokeWidth: 1,
                                         },
                                         hover: {
-                                            fill: "#F53",
-                                            outline: "none",
+                                            fill: '#F53',
+                                            outline: 'none',
                                         },
                                         pressed: {
-                                            fill: "#E42",
-                                            outline: "none",
-                                        }
+                                            fill: '#E42',
+                                            outline: 'none',
+                                        },
                                     }}
                                 />
-                            )
+                            );
                         })
                     }
                 </Geographies>
             </ComposableMap>
             <ReactTooltip id={tooltipId} />
         </>
-    )
+    );
 }

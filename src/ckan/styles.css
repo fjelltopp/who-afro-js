@@ -1,19 +1,19 @@
 body {
-  padding: 50px;
+    padding: 50px;
 }
 
 .inline-inputs,
 .inline-inputs .form-select {
-  display: inline;
+    display: inline;
 }
 
 .progress {
-  border-radius: 0;
-  min-width: 200px;
-  height: 25px;
+    border-radius: 0;
+    min-width: 200px;
+    height: 25px;
 }
 
 .btn.active {
-  background-color: #b7b7b7;
-  color: #1a1e21;
+    background-color: #b7b7b7;
+    color: #1a1e21;
 }
