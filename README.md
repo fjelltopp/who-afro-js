@@ -7,7 +7,12 @@ This repository contains small, independent React components designed to be inte
 The project uses [parcel](https://parceljs.org) to build components into their respective directories. This approach allows for the creation of small, independent components that can be reused and repurposed while maintaining a consistent development workflow.
 
 ## CORS WORKAROUND
-To get around CORS issues with `afro.fjelltopp.org` we are using `python proxy-server.py` and then having javascript make api requsts to the local flask server to proxy requests so that it's happening via an api rather than the browser.
+To get around CORS issues with `afro.fjelltopp.org` we are using `python proxy-server.py` and then having javascript make api requsts to the local flask server to proxy requests so that it's happening via an api rather than the browser, e.g.
+
+```sh
+pipenv sync
+pipenv run python proxy-server.py
+```
 
 Eventually once CORS have been opened up on `afro.fjelltopp.org`, you can delete this functionality
 
