@@ -1,0 +1,25 @@
+name: lint and build
+on:
+    pull_request:
+        types: [opened, edited, synchronize, reopened]
+        branches:
+            - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - name: setup dependencies
+        run: npm install
+      - name: lint
+        run: npm run lint
+      - name: check black
+        run: npm run format-dry-run
+      - name: build
+        run: npm run build
