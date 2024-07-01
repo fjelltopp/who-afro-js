@@ -1,4 +1,5 @@
 {
+  "name": "who-afro-js",
   "source": [
     "src/map/index.html",
     "src/ckan/index.html"
