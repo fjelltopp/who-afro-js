@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import ConfigContext from './ConfigContext';
 import App from './app';
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById('who-afro-js');
 
 export default function Root() {
     const config = {
