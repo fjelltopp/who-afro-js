@@ -82,8 +82,8 @@ export default function App(): JSX.Element {
             </div>
             {selectedCountry && (
                 <div className="card-body">
-                    <div className="row">
-                        <div className="col-md-6 border-end">
+                    <div className="row panel-row">
+                        <div className="col-md-6 panel-container border-end">
                             <LeftPanel
                                 {...{
                                     years,
@@ -96,7 +96,7 @@ export default function App(): JSX.Element {
                                 }}
                             />
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6 panel-container">
                             <RightPanel {...{ selectedCountry, setSelectedCountry, selectedYear, selectedSex }} />
                         </div>
                     </div>
