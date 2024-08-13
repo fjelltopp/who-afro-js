@@ -16,7 +16,7 @@ export default function LineChart({ years, data, selectedSex }) {
         responsive: true,
         spanGaps: true,
         elements: {
-            line: { tension: 0.5 },
+            line: { },
         },
         plugins: {
             tooltip: {
@@ -38,7 +38,7 @@ export default function LineChart({ years, data, selectedSex }) {
 
     const allYears = Array.from({ length: totalYears }, (_, index) => minYear + index);
 
-    const getValue = (year, sex) => data.find((record) => record.year === year && record.sex === sex)?.value || null;
+    const getValue = (year, sex) => data.find((record) => String(record.year) === String(year) && record.sex === sex)?.value || null;
 
     const chartData = {
         labels: allYears,
