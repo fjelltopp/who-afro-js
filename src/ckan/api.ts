@@ -42,6 +42,7 @@ export const fetchCountryData = (config: ConfigType, country: string) =>
                 q: JSON.stringify({
                     [config.API_FIELDS.country]: country,
                 }),
+                limit: '32000',
             },
         })
         .then(({ data: records }: AxiosResponse) =>
@@ -62,6 +63,7 @@ export const fetchYearData = (config: ConfigType, year: number, sex: string) =>
                     [config.API_FIELDS.segment]: sex,
                 }),
                 fields: [config.API_FIELDS.country, config.API_FIELDS.value].join(','),
+                limit: '32000',
             },
         })
         .then(({ data: records }: AxiosResponse) =>
