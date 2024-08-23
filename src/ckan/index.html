@@ -80,15 +80,15 @@
       }'
     ></div> -->
 
-        <div
+        <!-- <div
             id="who-afro-js"
             data-datastore-path="http://127.0.0.1:5000/api/3/action/datastore_search"
-            data-resource-id="bfb4b1ef-65a7-4be3-9f1d-d40dd99767af"
-            data-resource-title="Life expectancy at birth (years)"
-            data-round-to-decimal-places="1"
+            data-resource-id="923e5799-9d4c-492a-bba4-76346a0e85a1"
+            data-resource-title="New HIV infections (per 1000 uninfected population)"
+            data-round-to-decimal-places="2"
             data-labels='{
-          "segment": "Disaggregating dimension",
-          "amount": "Deaths per 100k",
+          "segment": "Sex",
+          "amount": "HIV infections per 1000 uninfected population",
           "noRowsWarning": "No data to display"
       }'
             data-sexes='[
@@ -109,9 +109,35 @@
         }
       ]'
             data-api-fields='{
-        "value": "AMOUNT_N",
+        "value": "RATE_PER_1000_N",
         "country": "GEO_NAME_SHORT",
         "segment": "DIM_SEX",
+        "time_axis": "DIM_TIME"
+      }'
+        ></div> -->
+
+        <div
+            id="who-afro-js"
+            data-datastore-path="http://127.0.0.1:5000/api/3/action/datastore_search"
+            data-resource-id="b5c112ad-177c-4a85-a177-c654b70d96cc"
+            data-resource-title="Out-of-pocket expenditure as percentage of current health expenditure (CHE) (%) data for Africa Region"
+            data-round-to-decimal-places="2"
+            data-labels='{
+          "segment": "",
+          "amount": "Out-of-pocket expenditure as percentage of current health expenditure (CHE) (%) data for Africa Region",
+          "noRowsWarning": "No data to display"
+      }'
+            data-sexes='[
+        {
+            "id": "TOTAL",
+            "label": "Total",
+            "color": "#198754"
+        }
+      ]'
+            data-api-fields='{
+        "value": "PERCENTAGE_N",
+        "country": "GEO_NAME_SHORT",
+        "segment": "",
         "time_axis": "DIM_TIME"
       }'
         ></div>
